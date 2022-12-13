@@ -6,7 +6,6 @@ const gameCalc = () => {
   const gameCalcLogic = () => {
     const numberOne = randomNumber(100);
     const numberTwo = randomNumber(100);
-
     const operators = ['+', '-', '*'];
     const operator = operators[randomNumber(2)];
     const questionExpression = `${numberOne} ${operator} ${numberTwo}`;
