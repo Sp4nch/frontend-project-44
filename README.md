@@ -14,14 +14,19 @@
 </ol>
 <div align="center">
   <h2><b>Overviews</b></h2>
-  <h3><b>brain-even</b></h3>
+<h3><b>brain-even</b></h3>
+
 [![asciicast](https://asciinema.org/a/sUUFRuPuYbqgorWeFlGvaHSdU.svg)](https://asciinema.org/a/sUUFRuPuYbqgorWeFlGvaHSdU)
-    <h3><b>brain-calc</b></h3>
+<h3><b>brain-calc</b></h3>
+
 [![asciicast](https://asciinema.org/a/NpJh8WqdeigfliFqSyduX47fY.svg)](https://asciinema.org/a/NpJh8WqdeigfliFqSyduX47fY)
-    <h3><b>brain-gcd</b></h3>
+<h3><b>brain-gcd</b></h3>
+
 [![asciicast](https://asciinema.org/a/wtt20tfIbSYrwoggW2Dy2IlHe.svg)](https://asciinema.org/a/wtt20tfIbSYrwoggW2Dy2IlHe)
-    <h3><b>brain-progression</b></h3>
+<h3><b>brain-progression</b></h3>
+
 [![asciicast](https://asciinema.org/a/ojCatGFjYlyejYw9chmE8g15V.svg)](https://asciinema.org/a/ojCatGFjYlyejYw9chmE8g15V)
-    <h3><b>brain-prime</b></h3>
+<h3><b>brain-prime</b></h3>
+
 [![asciicast](https://asciinema.org/a/zPHGgleBdFMV8CM4Xi1vSd16S.svg)](https://asciinema.org/a/zPHGgleBdFMV8CM4Xi1vSd16S)
 </div>
