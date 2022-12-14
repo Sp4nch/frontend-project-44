@@ -7,7 +7,7 @@ const gameCalc = () => {
     const numberOne = randomNumber(100);
     const numberTwo = randomNumber(100);
     const operators = ['+', '-', '*'];
-    const operator = operators[randomNumber(2)];
+    const operator = operators[randomNumber(3)];
     const questionExpression = `${numberOne} ${operator} ${numberTwo}`;
     let rightAnsw;
 

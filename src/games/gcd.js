@@ -6,7 +6,6 @@ const gameGcd = () => {
   const gameLogicGcd = () => {
     const numberOne = randomNumber(100);
     const numberTwo = randomNumber(100);
-
     const questionNumber = `${numberOne} ${numberTwo}`;
 
     const getGcd = (numberLocalOne, numberLocalTwo) => {
