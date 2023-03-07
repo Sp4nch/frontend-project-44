@@ -3,6 +3,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/d2dd7ac97915b0b04fbf/maintainability)](https://codeclimate.com/github/Sp4nch/frontend-project-44/maintainability)
 <h2><b>Description</b></h2>
 <p><i>Brain Games</i> is - a set consisting of 5 mini-games. Each game contains 3 questions that the player has to answer. The player has no right to make a mistake, 1 mistake is a loss. good luck.</p>
+
 ## Install
 ```sh
 git clone git@github.com:Sp4nch/frontend-project-44.git
