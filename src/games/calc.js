@@ -1,33 +1,33 @@
 import commonLogic from '../index.js';
-import randomNumber from '../helpers/random-number.js';
+import getRandomInRange from '../helpers/random-number.js';
 
-const gameCalc = () => {
-  const gameIntro = ('What is the result of the expression?');
-  const gameCalcLogic = () => {
-    const numberOne = randomNumber(100);
-    const numberTwo = randomNumber(100);
-    const operators = ['+', '-', '*'];
-    const operator = operators[randomNumber(3)];
-    const questionExpression = `${numberOne} ${operator} ${numberTwo}`;
-    let rightAnsw;
+const gameIntro = ('What is the result of the expression?');
 
-    switch (operator) {
-      case '-':
-        rightAnsw = numberOne - numberTwo;
-        break;
-      case '+':
-        rightAnsw = numberOne + numberTwo;
-        break;
-      case '*':
-        rightAnsw = numberOne * numberTwo;
-        break;
-      default:
-        rightAnsw = null;
-        break;
-    }
-    rightAnsw = String(rightAnsw);
-    return ([questionExpression, rightAnsw]);
-  };
-  commonLogic(gameIntro, gameCalcLogic);
+const getRandomOperator = () => {
+  const operators = ['+', '-', '*'];
+  const operator = operators[getRandomInRange(0, operators.length - 1)];
+  return operator;
 };
-export default gameCalc;
+
+const calculation = (num1, num2, operator) => {
+  switch (operator) {
+    case '+': return num1 + num2;
+    case '-': return num1 - num2;
+    case '*': return num1 * num2;
+    default: throw new Error(`Operator ${operator} - is incorrect`);
+  }
+};
+
+const gameCalcLogic = () => {
+  const numberOne = getRandomInRange(1, 100);
+  const numberTwo = getRandomInRange(1, 100);
+  const operator = getRandomOperator();
+  const questionExpression = `${numberOne} ${operator} ${numberTwo}`;
+  let rightAnsw;
+
+  rightAnsw = calculation(numberOne, numberTwo, operator);
+  rightAnsw = String(rightAnsw);
+  return ([questionExpression, rightAnsw]);
+};
+
+export default () => commonLogic(gameIntro, gameCalcLogic);

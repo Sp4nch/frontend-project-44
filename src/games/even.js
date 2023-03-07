@@ -1,15 +1,13 @@
 import commonLogic from '../index.js';
-import randomNumber from '../helpers/random-number.js';
+import getRandomInRange from '../helpers/random-number.js';
 
-const gameEven = () => {
-  const gameIntro = 'Answer "yes" if the number is even, otherwise answer "no".';
+const gameIntro = 'Answer "yes" if the number is even, otherwise answer "no".';
+const isEven = (number) => (number % 2 === 0 ? 'yes' : 'no');
 
-  const gameEvenLogic = () => {
-    const questionNumber = randomNumber(100);
-    const rightAnswer = questionNumber % 2 === 0 ? 'yes' : 'no';
-    return ([questionNumber, rightAnswer]);
-  };
-  commonLogic(gameIntro, gameEvenLogic);
+const gameEvenLogic = () => {
+  const questionNumber = getRandomInRange(1, 100);
+  const rightAnswer = isEven(questionNumber);
+  return ([questionNumber, rightAnswer]);
 };
 
-export default gameEven;
+export default () => commonLogic(gameIntro, gameEvenLogic);
