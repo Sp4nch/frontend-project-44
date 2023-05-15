@@ -2,6 +2,7 @@ import commonLogic from '../index.js';
 import getRandomInRange from '../helpers/random-number.js';
 
 const gameIntro = 'Find the greatest common divisor of given numbers.';
+
 const getGcd = (numberLocalOne, numberLocalTwo) => {
   if (numberLocalTwo === 0) {
     return numberLocalOne;
@@ -14,9 +15,8 @@ const gameLogicGcd = () => {
   const numberTwo = getRandomInRange(1, 100);
   const questionNumber = `${numberOne} ${numberTwo}`;
 
-  let rightAnsw = getGcd(numberOne, numberTwo);
-  rightAnsw = String(rightAnsw);
-  return ([questionNumber, rightAnsw]);
+  const rightAnswer = String(getGcd(numberOne, numberTwo));
+  return ([questionNumber, rightAnswer]);
 };
 
 export default () => commonLogic(gameIntro, gameLogicGcd);

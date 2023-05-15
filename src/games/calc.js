@@ -5,8 +5,7 @@ const gameIntro = ('What is the result of the expression?');
 
 const getRandomOperator = () => {
   const operators = ['+', '-', '*'];
-  const operator = operators[getRandomInRange(0, operators.length - 1)];
-  return operator;
+  return operators[getRandomInRange(0, operators.length - 1)];
 };
 
 const calculation = (num1, num2, operator) => {
@@ -23,11 +22,8 @@ const gameCalcLogic = () => {
   const numberTwo = getRandomInRange(1, 100);
   const operator = getRandomOperator();
   const questionExpression = `${numberOne} ${operator} ${numberTwo}`;
-  let rightAnsw;
-
-  rightAnsw = calculation(numberOne, numberTwo, operator);
-  rightAnsw = String(rightAnsw);
-  return ([questionExpression, rightAnsw]);
+  const rightAnswer = String(calculation(numberOne, numberTwo, operator));
+  return ([questionExpression, rightAnswer]);
 };
 
 export default () => commonLogic(gameIntro, gameCalcLogic);

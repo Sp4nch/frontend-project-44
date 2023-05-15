@@ -15,13 +15,11 @@ const makeProgression = (length) => {
 };
 
 const gameProgLogic = () => {
-  let progression = makeProgression(7);
+  const progression = makeProgression(7);
   const missingNumber = getRandomInRange(0, progression.length - 1);
-  let rightAnsw = progression[missingNumber];
+  const rightAnswer = String(progression[missingNumber]);
   progression[missingNumber] = '..';
-  progression = progression.join(' ');
-  rightAnsw = String(rightAnsw);
-  return ([progression, rightAnsw]);
+  return ([progression.join(' '), rightAnswer]);
 };
 
 export default () => commonLogic(gameIntro, gameProgLogic);
